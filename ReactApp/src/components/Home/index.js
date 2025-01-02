@@ -9,6 +9,7 @@ import DepartmentComponent from "../DepartmentComponent"
 import LatestPostComponent from "../LatestPostComponent"
 import TrendingComponent from "../TrendingComponent"
 import RoomComponent from "../RoomComponent"
+import FooterComponent from "../FooterComponent"
 
 
 import { CiMail } from "react-icons/ci";
@@ -204,6 +205,7 @@ const navItems = [
                         <p>Check out our hand-selected products and why we think you'll love them!</p>
                         <button className="view-product-btn">View Products</button>
                 </div>
+                <FooterComponent/>
               
 
             </div>

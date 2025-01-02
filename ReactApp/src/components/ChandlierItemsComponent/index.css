@@ -1,0 +1,29 @@
+.list-Items-card{
+    background-color: #F4F4F4;
+    border-radius: 5px;
+    width: auto;
+    margin: 10px;
+    padding: 15px;
+}
+
+.style-image{
+    height:100px;
+}
+
+.edit-btn{
+    background-color: #5B7EA7;
+    border:none;
+    color:white;
+    padding:10px;
+    border-radius: 4px;
+    margin:2px;
+}
+
+.delete-btn{
+    background-image: linear-gradient(#133554, #011928);
+    border:none;
+    color:white;
+    padding:10px;
+    border-radius: 4px;
+    margin:2px;
+}

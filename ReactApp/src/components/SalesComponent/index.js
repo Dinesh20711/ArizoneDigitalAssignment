@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import './index.css'
 import ShopItemsComponent from '../ShopItemsComponent'
+import { Link } from "react-router-dom";
 
 const shopItems = [
     { id: 1, imgUrl: "https://imgcms.1stoplighting.com/site/common/promos/all/2025/CWI.png" },
@@ -12,6 +13,11 @@ const shopItems = [
   
 
 class SalesComponent extends Component{
+       
+
+
+
+
     render(){
         return(
             <>
@@ -20,7 +26,7 @@ class SalesComponent extends Component{
                 <h1 className="sales-section-heading">NEW YEAR NEW LIGHTING</h1>
                 <h2 className="sales-heading-2">Lighting Extravaganza - upto 40% OFF until 1/12</h2>
 
-                <button className="sales-shop-btn">Shop</button>
+                <Link to='/chandlier'><button className="sales-shop-btn">Shop</button></Link>
 
                 <hr className="horizontal-line"/>
                 <ul className="sales-shop-btn-container">
