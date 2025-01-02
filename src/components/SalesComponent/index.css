@@ -1,0 +1,129 @@
+.sales-container{
+    background-image: linear-gradient(#133554, #011928);
+    background-repeat: no-repeat;
+    background-position: top;
+    color: #1f3e60;
+    min-height: 50vh;
+    width:90%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -6px;
+    margin-bottom: 1px;
+    padding:47px;
+
+}
+
+.sales-section-heading{
+    font-size: 38px !important;
+    letter-spacing: 2px;
+    
+    color:#FDFDD4;
+    text-shadow: 0 0 10px #FFFAC2;
+    text-align: center;
+    margin-top: 2px;
+    
+}
+
+.sales-heading-2{
+    text-align: center;
+    font-size: 25px;
+    color:white;
+    margin-top: 6px;
+    color: white;
+    margin-top: 21px;
+}
+
+.sales-shop-btn{
+    font-size: 18px;
+    background-color: transparent;
+    border: 2px solid #FBF0C9;
+    border-radius: 5px;
+    padding: 5px 5px;
+    color: #FFFAC2;
+    text-shadow: 0 0 10px #FFFAC2;
+    font-weight: 700;
+    width: 89px;
+    margin-top: 23px;
+}
+
+.horizontal-line{
+    color:white;
+    width:80%;
+    text-align: center;
+    margin-top: 32px;  
+}
+
+.sales-shop-btn-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    align-items: center;
+    list-style: none;
+    margin-top: 32px;
+ 
+    width:70%;
+}
+
+.sales-section-shop-products{
+    width:90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-images{
+    display: block;
+    max-width: 100%;
+    margin-bottom:18px;
+
+}
+
+.sm-product-images{
+    display: block;
+    max-width: 100%;
+    margin-bottom:18px;
+}
+
+.lg-product-image{
+    display: none;
+}
+.lg-product-images-1{
+    display: none;
+   
+}
+
+
+@media (min-width:800px){
+    .sales-section-shop-products{
+        width:90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       
+    }
+    .lg-product-images-1{
+        display: block;
+        max-width: 38%;
+       
+        margin-bottom: none;
+    
+    }
+    .product-images{
+        display: none;
+    }
+    
+
+    .sm-product-images{
+        display: none;
+      
+    }
+    .lg-product-image{
+        display: block;
+        width:60%;
+       
+
+    }
+    
+}

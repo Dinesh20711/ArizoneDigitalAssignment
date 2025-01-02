@@ -1,0 +1,38 @@
+.list-items-latest{
+    
+    width: 100%;
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.latest-des{
+    font-size: 18px;
+    color: #333333;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+}
+
+.latest-post-image{
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height:300px;
+}
+
+.latest-post-description{
+    color: #1f3e60;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.latest-post-description:hover{
+    text-decoration: underline;
+}
+
+
+@media (min-width:800px) {
+    .list-items-latest{
+        width:auto;
+    }
+}

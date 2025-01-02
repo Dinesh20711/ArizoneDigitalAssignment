@@ -1,0 +1,38 @@
+.room-list-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+}
+
+.rooms-image{
+    border-radius: 50%;
+    margin: 0px auto 20px;
+    object-fit: cover;
+    height: 170px;
+    width: 170px;
+
+}
+
+.room-heading{
+    font-size: 24px;
+    color: #1f3e60;
+    margin-bottom: 6px;
+}
+
+.room-heading:hover{
+    font-size: 24px;
+    color: #1f3e60;
+    text-decoration: underline;
+}
+
+
+
+@media (min-width:800px){
+    .room-list-items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:auto;
+    }
+}

@@ -1,0 +1,75 @@
+.trending-images{
+    height:320px;
+    width:100%;
+}
+
+.Styled-trnding-card{
+    background-color: #1f3e60;
+    color: #fff;
+    padding: 30px;
+    margin-top: -4px;
+    margin-bottom: 30px;
+}
+
+.title-section{
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.description-section{
+    margin: 0 0 10px;
+}
+
+.shop-now-btn{
+    color: #fff !important;
+   
+}
+
+.shop-now-btn:hover{
+    text-decoration: underline;
+}
+
+
+
+
+@media (min-width:800px){
+    .trending-images{
+        height:380px;
+        width:100%;
+    }
+
+    .Styled-trnding-card{
+        background-color: #1f3e60;
+        color: #fff;
+        padding: 30px;
+        margin-top: -4px;
+        margin-bottom: 30px;
+        width:100%;
+    }
+
+    .title-section{
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+    .shop-now-btn{
+        color: #fff !important;
+       
+    }
+    
+    .shop-now-btn:hover{
+        text-decoration: underline;
+    }
+    
+
+    .trend-list-container{
+        width:48%;
+    }
+}
+
