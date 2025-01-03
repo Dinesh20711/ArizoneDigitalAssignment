@@ -1,14 +1,23 @@
 import {Component} from "react" 
 import Navbar from "../Navbar"
 import ChandlierItemsComponent from "../ChandlierItemsComponent"
-import NavItems from "../NavItems"
+
 import './index.css'
 
 
 
 
 class ChandlierRoute extends Component{
-    state = {styleItemsList:[]}
+    state = {styleItemsList:[],style:'',imgUrl:""}
+
+
+    getUserInput=(event) =>{
+        this.setState({style:event.target.value})
+    }
+
+    getImageUrl=(event) =>{
+        this.setState({imgUrl:event.target.value})
+    }
 
     getData = (data) =>{
         this.setState({styleItemsList:data})
@@ -17,6 +26,8 @@ class ChandlierRoute extends Component{
     onDeletegetData = (data) =>{
         this.setState({styleItemsList:data})
     }
+
+    
 
     onDelete = async (id) =>{
         
@@ -33,6 +44,7 @@ class ChandlierRoute extends Component{
        this.onDeletegetData(fetchedData.data)
 
     }
+
 
 
     getStyleDetails = async() =>{
@@ -52,6 +64,44 @@ class ChandlierRoute extends Component{
         
     }
 
+    
+
+    setStateCreateChandliers = (data) => {
+        this.setState({styleItemsList:data})
+    }
+
+    createChandeliers = async(event) =>{
+        event.preventDefault();
+        const {style,imgUrl} = this.state
+
+        const newStyle={
+            imageUrl: imgUrl,
+            style: style
+        }
+
+        console.log(newStyle)
+
+        const options = {
+            method: 'POST', 
+            headers: {
+              'Content-Type': 'application/json', 
+            },
+            body: JSON.stringify(newStyle), 
+          };
+      
+        const url = `http://localhost:3001/api/addlightings`
+        console.log(url)
+        const response = await fetch(url, options);
+ 
+        const fetchedData = await response.json() 
+        //console.clear();
+        console.log(fetchedData.data)
+        
+ 
+        this.setStateCreateChandliers(fetchedData.data)
+ 
+     }
+
     render(){
         const {styleItemsList} = this.state
         console.log(styleItemsList)
@@ -64,6 +114,18 @@ class ChandlierRoute extends Component{
                     <div className = "shop-by-style-bar">
                         <h4>Shop by Styles</h4>
                     </div>
+
+                    <div className = "shop-by-style-bar">
+                        <div>
+                            <form onSubmit={this.createChandeliers}>
+                                
+                                <input className="input-section" type="text" onChange={this.getUserInput} placeholder="Style"/>
+                                <input className="input-section" type="text" onChange={this.getImageUrl} placeholder="ImageUrl"/>
+                                <button className="submit-btn" type="submit"> submit </button>
+                            </form>
+                        </div>
+                    </div>
+
                     <ul className="chandlier-container">
                         {styleItemsList.map((eachItem) =>{
                             return <ChandlierItemsComponent onDelete = {this.onDelete} key={eachItem.id} chandListItem={eachItem}/>

@@ -63,9 +63,11 @@ app.post("/api/addlightings", (req, res) => {
         id : fetchingLastData.id + 1,
         ...newLighting
     }
-    lightingData.push(lightingAdd); 
 
-    res.status(201).json({ message: "Lighting successfully added.", data: newLighting });
+    lightingData.push(lightingAdd); 
+    console.log(lightingData)
+
+    res.status(201).json({data:lightingData, message: "Lighting successfully added." });
 });
 
 

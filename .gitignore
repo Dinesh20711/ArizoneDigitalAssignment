@@ -1,5 +1,7 @@
 # Dependencies
 /node_modules
+/Backend/node_modules
+/ReactApp/node_modules
 
 # Build output
 /build
