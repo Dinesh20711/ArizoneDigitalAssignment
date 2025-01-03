@@ -21,12 +21,15 @@ class SalesComponent extends Component{
     render(){
         return(
             <>
+            <h2 className="sales-heading-3">Click the below button to visit CRUD Features</h2>
+
+                <Link to='/chandlier'><button className="sales-shop-btn1">Click Here</button></Link>
             <div className = "sales-container">
                             
                 <h1 className="sales-section-heading">NEW YEAR NEW LIGHTING</h1>
-                <h2 className="sales-heading-2">Lighting Extravaganza - upto 40% OFF until 1/12</h2>
+                <h2 className="sales-heading-2">Lighting Extravaganza-upto 40% OFF until 1/12</h2>
 
-                <Link to='/chandlier'><button className="sales-shop-btn">Shop</button></Link>
+                <button className="sales-shop-btn">Shop now</button>
 
                 <hr className="horizontal-line"/>
                 <ul className="sales-shop-btn-container">

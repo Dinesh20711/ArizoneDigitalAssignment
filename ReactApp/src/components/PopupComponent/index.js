@@ -23,14 +23,14 @@ const PopupComponent = (props) => {
       >
         {close => (
           <>
-            <div>
-              <p>Are you sure you want to delete?</p>
+            <div className="popUp-container">
+              <p className="prompt">Are you sure you want to delete?</p>
               <button
                 type="button"
                 className="confirm-delete-btn"
                 onClick={() => {
-                  onClickDelete(); // Trigger the delete logic
-                  close(); // Close the popup after deletion
+                  onClickDelete(); 
+                  close();
                 }}
               >
                 Confirm
@@ -38,7 +38,7 @@ const PopupComponent = (props) => {
               <button
                 type="button"
                 className="cancel-btn"
-                onClick={close} // Close the popup without deleting
+                onClick={close} 
               >
                 Cancel
               </button>

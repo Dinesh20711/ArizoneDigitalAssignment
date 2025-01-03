@@ -28,10 +28,13 @@ class ChandlierRoute extends Component{
     }
 
     
+    setStateCreateChandliers = (data) => {
+        this.setState({styleItemsList:data})
+    }
 
     onDelete = async (id) =>{
         
-        console.log(`-----${id}`)
+        //console.log(`-----${id}`)
        const url = `http://localhost:3001/api/deletelightings/${id}`
        console.log(url)
        const response = await fetch(url, { method: 'DELETE' });
@@ -66,9 +69,6 @@ class ChandlierRoute extends Component{
 
     
 
-    setStateCreateChandliers = (data) => {
-        this.setState({styleItemsList:data})
-    }
 
     createChandeliers = async(event) =>{
         event.preventDefault();
@@ -99,11 +99,12 @@ class ChandlierRoute extends Component{
         
  
         this.setStateCreateChandliers(fetchedData.data)
+        this.setState({style:"",imageUrl:""})
  
      }
 
     render(){
-        const {styleItemsList} = this.state
+        const {styleItemsList,imageUrl,style} = this.state
         console.log(styleItemsList)
         return (
             <>
@@ -112,15 +113,15 @@ class ChandlierRoute extends Component{
                     <h2 className="chandlier-heading">Chandeliers</h2>
 
                     <div className = "shop-by-style-bar">
-                        <h4>Shop by Styles</h4>
+                        <h4>Add Chandeliers by Styles</h4>
                     </div>
 
                     <div className = "shop-by-style-bar">
                         <div>
                             <form onSubmit={this.createChandeliers}>
                                 
-                                <input className="input-section" type="text" onChange={this.getUserInput} placeholder="Style"/>
-                                <input className="input-section" type="text" onChange={this.getImageUrl} placeholder="ImageUrl"/>
+                                <input className="input-section" value = {style} type="text" onChange={this.getUserInput} placeholder="Style"/>
+                                <input className="input-section" value={imageUrl} type="text" onChange={this.getImageUrl} placeholder="ImageUrl"/>
                                 <button className="submit-btn" type="submit"> submit </button>
                             </form>
                         </div>

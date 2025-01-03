@@ -34,6 +34,49 @@
     margin-top: 21px;
 }
 
+.sales-heading-3{
+    text-align: center;
+    font-size: 25px;
+    color:white;
+    margin-top: 6px;
+    color: white;
+    margin-top: 21px;
+    animation: colorScale 2s infinite alternate;
+    font-weight: bold;
+}
+
+.sales-shop-btn1{
+    background-color: #011928;
+    color:white;
+    padding:10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.sales-shop-btn1:hover{
+    border-radius:0px;
+    border: 1px solid white;
+
+}
+
+@keyframes colorScale {
+    0% {
+      color: #8b0000; 
+      transform: scale(1);
+    }
+    50% {
+      color: #003366; 
+      transform: scale(1.2);
+    }
+    100% {
+      color: #004d00; 
+      transform: scale(1.1);
+    }
+}
+
+
 .sales-shop-btn{
     font-size: 18px;
     background-color: transparent;

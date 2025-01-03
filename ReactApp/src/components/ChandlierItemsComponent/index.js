@@ -15,10 +15,12 @@ const ChandlierItemsComponent = (props) =>{
     return (
         <div className="list-Items-card">
             <img src={imageUrl} alt="style" className ="style-image"/>
-            <h4>{style}</h4>
-            <button className="edit-btn">Edit</button>
-           
-            <PopupComponent onDelete={onDelete} chandListItem={chandListItem}/>
+            <h4 className="style-name">{style}</h4>
+            <div className="btn-container">
+                
+            
+                <PopupComponent onDelete={onDelete} chandListItem={chandListItem}/>
+            </div>
         </div>
     )
 }
